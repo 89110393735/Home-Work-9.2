@@ -19,18 +19,41 @@ public class Radio {
         this.currentStation = currentStation;
     }
 
-    public int getCurrentVolume() {
-        return currentVolume;
-    }
-
-    public void setCurrentVolume(int currentVolume) {
-        if (currentVolume < 0) {
+    public void nextStation() {
+        if (currentStation != 9) {
+            currentStation++;
+            return;
+        } else {
+            currentStation = 0;
             return;
         }
-        if (currentVolume > 100) {
-            return;
-        }
-        this.currentVolume = currentVolume;
     }
 
-}
+        public void prevStation () {
+            if (currentStation != 0) {
+                currentStation--;
+                return;
+
+            } else {
+                currentStation = 9;
+                return;
+            }
+        }
+
+        public int getCurrentVolume () {
+            return currentVolume;
+        }
+
+        public void setCurrentVolume ( int currentVolume){
+            if (currentVolume < 0) {
+                return;
+            }
+            if (currentVolume > 100) {
+                return;
+            }
+            this.currentVolume = currentVolume;
+        }
+    }
+
+
+
