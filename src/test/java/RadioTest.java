@@ -209,6 +209,7 @@ public class RadioTest {
         Assertions.assertEquals(expected, actual);
 
     }
+
     @Test
     public void prevValidStation() {
         Radio radio = new Radio();
@@ -218,6 +219,7 @@ public class RadioTest {
         int actual = radio.getCurrentStation();
         Assertions.assertEquals(expected, actual);
     }
+
     @Test
     public void prevNegativStation() {
         Radio radio = new Radio();
@@ -227,6 +229,7 @@ public class RadioTest {
         int actual = radio.getCurrentStation();
         Assertions.assertEquals(expected, actual);
     }
+
     @Test
     public void prevBoundaryOneStation() {
         Radio radio = new Radio();
@@ -237,6 +240,7 @@ public class RadioTest {
         Assertions.assertEquals(expected, actual);
 
     }
+
     @Test
     public void prevBoundaryNineStation() {
         Radio radio = new Radio();
